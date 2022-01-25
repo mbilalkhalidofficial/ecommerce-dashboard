@@ -1,0 +1,151 @@
+@import "../App.scss";
+
+.panel__conatainer__empty__row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2em;
+  height: 100%;
+}
+.panel__conatainer__empty__row__half {
+  width: 50%;
+}
+.message__panel__small {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-right: 1em;
+  height: 390px;
+}
+.message__card__col {
+  width: 40%;
+}
+.message__panel__small::-webkit-scrollbar {
+  width: 12px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+.message__panel__small::-webkit-scrollbar-thumb {
+  background-color: #acacac;
+  border-radius: 12px;
+}
+.message__panel__small::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+.message__panel__small__row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin: 0.5em 0em;
+}
+.message__panel__small__row:hover {
+  background-color: $primary;
+}
+.message__panel__samll__content {
+  display: flex;
+  align-items: center;
+}
+.message__panel__small__row__img {
+  width: 30px;
+  margin-right: 1em;
+}
+.panel__conatainer__empty__row__col {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.panel__card__content__notes {
+  display: flex;
+  font-size: $normal-font-size;
+  color: $font-color;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.panel__card__content__notes span {
+  margin-left: 0.5em;
+  font-size: $normal-font-size;
+  color: $font-color;
+  flex: 1;
+  max-width: 75%;
+  font-weight: 300;
+}
+.panel__card__content__notes a {
+  margin-left: 0.5em;
+  font-size: $normal-font-size;
+  color: $highlite;
+  font-weight: 300;
+}
+.panel__card__content__notes a:hover {
+  color: darken($highlite, 10%);
+}
+.panel__card__content__statistics {
+  font-size: $normal-font-size;
+  color: $font-color;
+}
+.panel__card__content__statistics a {
+  margin-left: 0.5em;
+  font-size: $normal-font-size;
+  color: $highlite;
+  font-weight: 300;
+}
+.panel__card__content__statistics a:hover {
+  color: darken($highlite, 10%);
+}
+.panel__card__content__statistics__null {
+  font-size: $normal-font-size;
+  color: rgb(206, 206, 206);
+}
+.order__details__shipping__heading {
+  font-size: $heading-font-size;
+  color: $font-color;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.bot__panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 10;
+}
+.bot__panel__cta__primary {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 100px;
+}
+.bot__panel__cta__primary svg {
+  width: 100%;
+  height: 100%;
+}
+.bot__panel__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-right: 1em;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 700px) {
+  .panel__conatainer__empty__row {
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .panel__conatainer__empty__row__col {
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .panel__conatainer__empty__row__half {
+    width: 100%;
+  }
+  .message__card__col {
+    width: 100%;
+  }
+}

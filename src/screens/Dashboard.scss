@@ -1,0 +1,121 @@
+@import "../App.scss";
+
+.dasboard__container {
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  max-width: 1920px;
+  padding-top: 7em;
+  height: 100%;
+}
+.side__bar {
+  width: 20%;
+  min-width: fit-content;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2em 0em;
+  background-color: #ffffff;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+.side__bar__header {
+  padding-bottom: 0.8em;
+  border-bottom: 3px solid $primary;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side__bar__header__img {
+  width: 70px;
+  margin-right: 0.5em;
+}
+.side__bar__header__content {
+  display: flex;
+  flex-direction: column;
+}
+.side__bar__header__content__top__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3em;
+}
+.side__bar__header__content__name {
+  font-size: $heading-font-size;
+  font-weight: bold;
+  color: $font-color;
+  margin-right: 1em;
+}
+.side__bar__header__content__status {
+  width: 25px;
+  height: 25px;
+  background-color: #00ff3c1e;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side__bar__header__content__status__beacon {
+  width: 15px;
+  height: 15px;
+  background-color: #00ff3c;
+  border-radius: 15px;
+}
+.side__bar__header__content__designation {
+  font-size: $normal-font-size;
+  color: $font-color;
+}
+
+.side__bar__cta {
+  padding-top: 0.8em;
+  border-top: 3px solid $primary;
+  margin-top: 5em;
+}
+
+.main {
+  flex: 1;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2em;
+  background-color: #ffffff;
+}
+
+.panel__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.panel__heading {
+  border-bottom: 3px solid $primary;
+  padding-bottom: 0.8em;
+  margin-bottom: 1em;
+  font-size: $heading-font-size;
+  color: $font-color;
+  font-weight: 600;
+}
+
+.panel__conatainer__empty {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  flex-direction: column;
+}
+
+@media (max-width: 700px) {
+  .dasboard__container {
+    flex-direction: column;
+  }
+  .side__bar {
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+  .panel__conatainer__empty {
+    width: 100%;
+  }
+}

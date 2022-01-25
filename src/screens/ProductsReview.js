@@ -1,0 +1,150 @@
+import React from "react";
+import "./Users.scss";
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import InputboxComponent from "../components/Inputbox";
+import ProductsReviewRow from "../components/ProductsReviewRow";
+import Select from "react-select";
+
+export default class ProductsReviews extends React.Component {
+  render() {
+    const Options = [
+      { value: "Fixed Cart Discount", label: "Fixed Cart Discount" },
+      { value: "strawberry", label: "Strawberry" },
+      { value: "vanilla", label: "Vanilla" },
+    ];
+    return (
+      <div className="panel__conatainer">
+        <div className="panel__heading">{this.props.screenName}</div>
+        <div className="panel__main__selctors__filters">
+          <InputboxComponent
+            placeholder="Search"
+            ClassName="input__box"
+            type="search"
+          />
+          <div className="panel__main__selctors__filters__entity">
+            <InputboxComponent
+              placeholder="SKU"
+              ClassName="input__box"
+              type="text"
+            />
+          </div>
+          <div className="panel__main__selctors__filters__entity">
+            <Select
+              // defaultValue={[colourOptions[2], colourOptions[3]]}
+              name="colors"
+              options={Options}
+              className="basic-multi-select"
+              classNamePrefix="select"
+            />
+          </div>
+          <div className="panel__main__selctors__filters__entity">
+            <Select
+              // defaultValue={[colourOptions[2], colourOptions[3]]}
+              name="colors"
+              options={Options}
+              className="basic-multi-select"
+              classNamePrefix="select"
+            />
+          </div>
+          <div className="panel__main__selctors__filters__entity">
+            <Select
+              // defaultValue={[colourOptions[2], colourOptions[3]]}
+              name="colors"
+              options={Options}
+              className="basic-multi-select"
+              classNamePrefix="select"
+            />
+          </div>
+        </div>
+        <div className="panel__main__plans">
+          <div className="panel__main__role__manager__content">
+            <div className="panel__main__freelancer">
+              <div className="panel__main__heading__row">
+                <div className="panel__main__heading__row__entry">ID</div>
+                <div className="panel__main__heading__row__entry">Title</div>
+                <div className="panel__main__heading__row__entry">
+                  Description
+                </div>
+                <div className="panel__main__heading__row__entry">Product</div>
+                <div className="panel__main__heading__row__entry">
+                  User Name
+                </div>
+                <div className="panel__main__heading__row__entry">
+                  Created At
+                </div>
+                <div className="panel__main__heading__row__entry">Options</div>
+              </div>
+              <ProductsReviewRow />
+              <ProductsReviewRow />
+              <ProductsReviewRow />
+              <ProductsReviewRow />
+              <ProductsReviewRow />
+              <ProductsReviewRow />
+              <ProductsReviewRow />
+              <ProductsReviewRow />
+              <ProductsReviewRow />
+              <div className="page__slider">
+                <div className="slider">
+                  <Nav
+                    variant="pills"
+                    defaultActiveKey="/dashboard/product-review"
+                  >
+                    <Nav.Link
+                      to="/dashboard/product-review"
+                      href="/dashboard/product-review"
+                      as={Link}
+                      className="nav__link__horizontal"
+                    >
+                      1
+                    </Nav.Link>
+                    <Nav.Link
+                      to="/dashboard/product-review"
+                      as={Link}
+                      className="nav__link__horizontal"
+                      eventKey="link-1"
+                    >
+                      2
+                    </Nav.Link>
+                    <Nav.Link
+                      to="/dashboard/product-review"
+                      as={Link}
+                      className="nav__link__horizontal"
+                      eventKey="link-2"
+                    >
+                      3
+                    </Nav.Link>
+                    <Nav.Link
+                      to="/dashboard/product-review"
+                      as={Link}
+                      className="nav__link__horizontal"
+                      eventKey="link-3"
+                    >
+                      4
+                    </Nav.Link>
+                    <Nav.Link
+                      to="/dashboard/product-review"
+                      as={Link}
+                      className="nav__link__horizontal"
+                      eventKey="link-4"
+                    >
+                      5
+                    </Nav.Link>
+                    <Nav.Link
+                      to="/dashboard/product-review"
+                      as={Link}
+                      className="nav__link__horizontal"
+                      eventKey="link-5"
+                    >
+                      6
+                    </Nav.Link>
+                  </Nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
